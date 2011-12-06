@@ -1,6 +1,7 @@
 github
 
 https://github.com/
+http://help.github.com/win-set-up-git/
 
 Global setup:
  Set up git
@@ -68,3 +69,18 @@ http://learn.github.com/p/tagging.html
 
 $ git tag -a s01 -m 'spiral 01'
 $ git tag
+
+------------------------------------------------------
+
+Git Bash
+
+cd git/dart/learn/pingpong
+
+git add .
+git commit -m "short description"
+
+$ git tag -a s01 -m 'spiral 01'
+$ git tag
+
+? git remote add origin git@github.com:dzenanr/pingpong.git
+git push origin master

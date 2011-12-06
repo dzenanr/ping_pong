@@ -20,10 +20,7 @@ class Ball {
   
   void move() {
     board.clear();
-    board.context.beginPath();
-    board.context.arc(x, y, r, 0, Math.PI*2, true); 
-    board.context.closePath();
-    board.context.fill();
+    draw();
     x += dx;
     y += dy;
   }
