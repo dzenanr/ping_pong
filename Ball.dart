@@ -21,6 +21,10 @@ class Ball {
   void move() {
     board.clear();
     draw();
+    if (x + dx > board.width || x + dx < 0)
+      dx = -dx;
+    if (y + dy > board.height || y + dy < 0)
+      dy = -dy;
     x += dx;
     y += dy;
   }
