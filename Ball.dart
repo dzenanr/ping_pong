@@ -4,8 +4,6 @@ class Ball {
   int x;
   int y;
   int r;
-  int dx = 2;
-  int dy = 4;
   
   Ball(this.board, this.x, this.y, this.r) {
     draw();
@@ -18,14 +16,4 @@ class Ball {
     board.context.fill();
   }
   
-  void move() {
-    board.clear();
-    draw();
-    if (x + dx > board.width || x + dx < 0)
-      dx = -dx;
-    if (y + dy > board.height || y + dy < 0)
-      dy = -dy;
-    x += dx;
-    y += dy;
-  }
 }
