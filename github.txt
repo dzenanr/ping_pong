@@ -1,0 +1,64 @@
+github
+
+https://github.com/
+
+Global setup:
+ Set up git
+  git config --global user.name "Dzenan Ridjanovic"
+  git config --global user.email dzenanr@gmail.com
+      
+Next steps:
+  mkdir pingpong
+  cd pingpong
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:dzenanr/pingpong.git
+  git push -u origin master
+      
+Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:dzenanr/pingpong.git
+  git push -u origin master
+
+Git
+
+http://www.spheredev.org/wiki/Git_for_the_lazy
+
+mkdir [project]
+cd [project]
+git init
+git add .
+git commit -m "short description"
+
+git status
+git diff
+git add [file1] [folder1]
+git commit -m "short description"
+
+git log
+git log -n1
+git log --stat --summary
+
+git config --list
+
+git remote add origin git@github.com:dzenanr/pingpong.git
+git push origin master
+
+Git Tutorial for SVN Users
+
+http://git.or.cz/course/svn.html
+
+Clone a remote repository into a local repository
+
+cd git
+cd dart
+cd game
+git clone git@github:chrisbu/Bounce .
+JSZ.
+
+Get the latest changes from the remote repository
+
+git pull
+
