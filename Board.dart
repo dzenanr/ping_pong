@@ -6,15 +6,17 @@ class Board {
   }
   
   //draw a circle
-  void circle(x, y, r) {
+  void circle(x, y, r, style) {
+    // context.setStrokeStyle(style);  // bug: nothing drawn
     context.beginPath();
     context.arc(x, y, r, 0, Math.PI*2, true);
     context.closePath();
-    context.fill();
+    context.stroke();
   }
     
   //draw a rectangle
-  void rectangle(x, y, w, h) {
+  void rectangle(x, y, w, h, style) {
+    //context.setFillStyle(style);  // bug: nothing drawn
     context.beginPath();
     context.rect(x,y,w,h);
     context.closePath();
