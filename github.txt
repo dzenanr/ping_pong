@@ -62,3 +62,9 @@ Get the latest changes from the remote repository
 
 git pull
 
+Tagging for versions (spirals)
+
+http://learn.github.com/p/tagging.html
+
+$ git tag -a s01 -m 'spiral 01'
+$ git tag
