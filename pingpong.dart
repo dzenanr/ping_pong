@@ -7,5 +7,4 @@ void main() {
   //get a reference to the canvas
   CanvasElement canvas = document.query('#canvas');
   Board board = new Board(canvas);
-  board.init();
 }

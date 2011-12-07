@@ -1,4 +1,5 @@
 class Ball {
+  
   Board board;
   
   int x;
