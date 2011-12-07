@@ -1,6 +1,6 @@
 class Board {
-  final int START_X = 0;
-  final int START_Y = 0;
+  final int START_X = 150;
+  final int START_Y = 150;
   final int BALL_R = 10;
   final int RACKET_W = 75;
   final int RACKET_H = 10;
@@ -19,7 +19,7 @@ class Board {
   Ball ball;
   Racket racket;
   
-  Board(CanvasElement this.canvas) {
+  Board(this.canvas) {
     context = canvas.getContext("2d");
     width = canvas.width;
     height = canvas.height;
@@ -39,10 +39,13 @@ class Board {
   void redraw() {
     clear(); 
     ball.draw();
+    //move the racket if the left or the right key is currently pressed
+    if (racket.rightDown) racket.x += 5;
+    else if (racket.leftDown) racket.x -= 5;
     racket.draw();
     if (ball.x + dx > width || ball.x + dx < 0)
       dx = -dx;
-    if (ball.y + dy > height || ball.y + dy < 0)
+    if (ball.y + dy < 0)
       dy = -dy;
     else if (ball.y + dy > height) {
       if (ball.x > racket.x && ball.x < racket.x + racket.w)
