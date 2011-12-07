@@ -83,5 +83,5 @@ git commit -m "spiral 0?"
 git tag -a s01 -m 'spiral 01'
 git tag
 
-? git remote add origin git@github.com:dzenanr/pingpong.git
 git push origin master
+git status

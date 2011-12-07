@@ -1,10 +1,12 @@
 class Board {
+  // squash court
   final int START_X = 150;
   final int START_Y = 150;
-  final int BALL_R = 10;
+  final int BALL_R = 8;
   final int RACKET_W = 75;
   final int RACKET_H = 10;
-  final int INTERVAL = 10;
+  final int INTERVAL = 12;
+  
   var intervalId;
   
   CanvasElement canvas;
@@ -57,4 +59,5 @@ class Board {
     ball.x += dx;
     ball.y += dy;
   }
+  
 }

@@ -9,10 +9,16 @@ class Racket {
   bool rightDown = false;
   bool leftDown = false;
   
+  var canvasMinX;
+  var canvasMaxX;
+  
   Racket(this.board, this.x, this.y, this.w, this.h) {
+    canvasMinX = 0;
+    canvasMaxX = canvasMinX + board.width;
     draw();
     document.on.keyDown.add(_onKeyDown);
     document.on.keyUp.add(_onKeyUp);
+    document.on.mouseMove.add(_onMouseMove);
   }
   
   void draw() {
@@ -41,5 +47,11 @@ class Racket {
       leftDown = false;
     }
   }
-
+  
+  _onMouseMove(event) {
+    if (event.pageX > canvasMinX && event.pageX < canvasMaxX) {
+      x = event.pageX - canvasMinX;
+    }
+  }
+  
 }
