@@ -1,3 +1,4 @@
+
 class Racket {
   
   Board board;
@@ -12,9 +13,9 @@ class Racket {
   
   Racket(this.board, this.x, this.y, this.w, this.h) {
     draw();
-    document.on.keyDown.add(_onKeyDown);
-    document.on.keyUp.add(_onKeyUp);
-    document.on.mouseMove.add(_onMouseMove);
+    document.on.keyDown.add(onKeyDown);
+    document.on.keyUp.add(onKeyUp);
+    document.on.mouseMove.add(onMouseMove);
   }
   
   void draw() {
@@ -24,19 +25,26 @@ class Racket {
     board.context.fill();
   }
  
-  //set rightDown or leftDown if the right or left keys are down
-  _onKeyDown(event) {
-    if (event.keyCode == 39) rightDown = true;
-    else if (event.keyCode == 37) leftDown = true;
+  // Set rightDown or leftDown if the right or left keys are down.
+  void onKeyDown(event) {
+    if (event.keyCode == 39) {
+      rightDown = true;
+    } else if (event.keyCode == 37) {
+      leftDown = true;
+    }
   }
   
-  //and unset them when the right or left key is released
-  _onKeyUp(event) {
-    if (event.keyCode == 39) rightDown = false;
-    else if (event.keyCode == 37) leftDown = false;
+  // Unset rightDown or leftDown when the right or left key is released.
+  void onKeyUp(event) {
+    if (event.keyCode == 39) {
+      rightDown = false;
+    } else if (event.keyCode == 37) {
+      leftDown = false;
+    }
   }
   
-  _onMouseMove(event) {
+  // Change a position of a racket with the mouse left or right mouvement.  
+  void onMouseMove(event) {
     if (event.pageX > board.X && event.pageX < board.width) {
       x = event.pageX - board.X - w/2;
       if (x < board.X) x = board.X;
