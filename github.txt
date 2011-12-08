@@ -85,3 +85,6 @@ git tag
 
 git push origin master
 git status
+
+To push tags:
+git push --tags

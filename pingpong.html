@@ -1,13 +1,200 @@
+<!DOCTYPE html>
+
 <html>
   <head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Dzenan Ridjanovic"/>
     <title>pingpong</title>
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/layout2c.css"/>
+    <link rel="stylesheet" type="text/css" href="css/link.css"/>
+    <link rel="stylesheet" type="text/css" href="css/page.css"/>
   </head>
+  
   <body>
-    <h2>Ping Pong in Dart</h2>
-    <canvas id="canvas" width="300" height="400"></canvas>
-    <div>
-      <button type="button" id="play">Play</button>
-    </div>
-    <script type="text/javascript" src="pingpong.dart.app.js"></script>
+    <header>
+      <h1>Learning Dart in Spirals</h1>
+      <h2>Dzenan Ridjanovic</h2>
+    </header>
+    
+    <aside>
+      <section> 
+        <header>
+          <h2>Ping Pong</h2>
+        </header>
+        <canvas id="canvas" width="298" height="400"></canvas>
+        <footer>
+          <button type="button" id="play" class="button">Play</button>
+        </footer>
+        <script type="text/javascript" src="pingpong.dart.app.js"></script>
+      </section>
+      
+      <nav>
+        <a href="https://github.com/dzenanr/pingpong" class="link">Code</a>
+        <a href="https://github.com/chrisbu/Bounce" class="link">Chris Buckett</a>
+        <a href="http://billmill.org/static/canvastutorial/" class="link">Bill Mill</a>
+        <a href="http://www.dartlang.org/">Dart</a> 
+        <a href="http://dartinside.com/">Dart Inside</a> 
+        <a href="http://dartwatch.com/">DartWatch</a>
+      </nav>
+    </aside>
+    
+    <section id="main">
+      <section> 
+        <header>
+          <h2>Overview</h2>
+        </header>
+        <p>
+          The Ping Pong game is developed in <a href="http://www.dartlang.org/">Dart</a> to start learning Dart 
+          (after reading the Getting Started section and developing the first 
+          <a  href="https://plus.google.com/u/0/112767453954051794400/posts/igDQd1ubWQs" class="link">example</a>). 
+          The spiral approach to learning is used to advance step-by-step. 
+          The game is based on the Bounce game developed by <a href="http://billmill.org/static/canvastutorial/" class="link">Bill Mill</a> 
+          in JavaScript and <a  href="https://github.com/chrisbu/Bounce" class="link">Chris Buckett</a> in Dart.
+        </p>
+        <p>
+          The <a href="https://github.com/dzenanr/pingpong" class="link">code</a> is kept at <a href="https://github.com/" class="link">GitHub</a>. 
+          If you are new to <a href="http://sixrevisions.com/resources/git-tutorials-beginners/" class="link">Git</a>, 
+          you should really <a href="http://www.ralfebert.de/blog/tools/git_screencast/" class="link">start</a> learning it. 
+          However, if you are impatient to start learning Dart, you may want to 
+          <a href="https://github.com/dzenanr/pingpong/tags" class="link">download</a> spirals.
+        </p>
+        <footer>
+       
+        </footer>
+      </section> 
+    
+      <section> 
+        <header>
+          <h2>Spiral 1</h2>
+        </header>
+        <p>
+          Display a small, black circle and a small, white rectangle with a black border.
+        </p>
+        <footer>
+       
+        </footer>
+      </section> 
+    
+      <section> 
+        <header>
+          <h2>Spiral 2</h2>
+        </header>
+        <p>
+          Display two circles and two rectangles with different colors. Could not display them with colors (a known bug).
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 3</h2>
+        </header>
+        <p>
+          Change a position of a small, black circle (a ball) in the same direction, with each new call of the move method.
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 4</h2>
+        </header>
+        <p>
+          Reorganize the code a bit.
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 5</h2>
+        </header>
+        <p>
+          Bounce the ball within the board.
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 6</h2>
+        </header>
+        <p>
+          Display a racket (a small, black rectangle).
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 7</h2>
+        </header>
+        <p>
+          Move the racket with the left and right keys of the keyboard.
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 8</h2>
+        </header>
+        <p>
+          Move the racket left or right with the mouse.
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 9</h2>
+        </header>
+        <p>
+          The board with a border and two rackets. The rackets cannot be moved outside the border. The Ping Pong (or Squash?) game can be played.
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 10</h2>
+        </header>
+        <p>
+          The game has a title and a button to restart the game.
+        </p>
+        <footer>
+       
+        </footer>
+      </section>
+    
+      <section> 
+        <header>
+          <h2>Spiral 11</h2>
+        </header>
+        <p>
+          The page uses CSS for a better display. There are some relevant web links. A section is added for each new spiral to indicate what is new.
+        </p>
+        <footer>
+       
+        </footer>
+      </section> 
+    </section>
   </body>
 </html>

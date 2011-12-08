@@ -65,17 +65,17 @@ class Board {
     
     // Move the north side racket if the left or the right key is currently pressed.
     if (racketNorth.rightDown) {
-      racketNorth.x += 5;
+      if (racketNorth.x < width - X - racketNorth.w - 4) racketNorth.x += 5;
     } else if (racketNorth.leftDown) {
-      racketNorth.x -= 5;
+      if (racketNorth.x > X + 4) racketNorth.x -= 5;
     }
     racketNorth.draw();
     
     // Move the south side racket if the left or the right key is currently pressed.
     if (racketSouth.rightDown) {
-      racketSouth.x += 5;
+      if (racketSouth.x < width - X - racketSouth.w - 4) racketSouth.x += 5;
     } else if (racketSouth.leftDown) {
-      racketSouth.x -= 5;
+      if (racketSouth.x > X + 4) racketSouth.x -= 5;
     }
     racketSouth.draw();
     
