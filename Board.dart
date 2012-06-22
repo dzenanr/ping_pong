@@ -15,8 +15,8 @@ class Board {
   
   int width;
   int height;
-  double startBallX;
-  double startBallY;
+  int startBallX;
+  int startBallY;
   int dx = 2;
   int dy = 4;
   
@@ -30,8 +30,8 @@ class Board {
     height = canvas.height;
     border();
     
-    startBallX = width / 2;
-    startBallY = height / 2;
+    startBallX = (width / 2).toInt();
+    startBallY = (height / 2).toInt();
     document.query('#play').on.click.add((e) {
       init();
     });
@@ -40,8 +40,8 @@ class Board {
   
   void init() {
     ball = new Ball(this, startBallX, startBallY, BALL_R);
-    racketNorth = new Racket(this, width/2, Y, RACKET_W, RACKET_H);
-    racketSouth = new Racket(this, width/2, height-RACKET_H, RACKET_W, RACKET_H);
+    racketNorth = new Racket(this, (width/2).toInt(), Y, RACKET_W, RACKET_H);
+    racketSouth = new Racket(this, (width/2).toInt(), height-RACKET_H, RACKET_W, RACKET_H);
     // Redraw every INTERVAL ms.
     intervalId = document.window.setInterval(redraw, INTERVAL);
   }
