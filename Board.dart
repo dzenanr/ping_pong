@@ -8,7 +8,7 @@ class Board {
   final num RACKET_H = 8;
   final num INTERVAL = 10;
 
-  var intervalId;
+  var timer;
 
   CanvasElement canvas;
   CanvasRenderingContext2D context;
@@ -30,8 +30,8 @@ class Board {
     height = canvas.height;
     border();
 
-    startBallX = (width / 2).toInt();
-    startBallY = (height / 2).toInt();
+    startBallX = width ~/ 2;
+    startBallY = height ~/ 2;
     document.query('#play').on.click.add((e) {
       init();
     });
@@ -43,7 +43,7 @@ class Board {
     racketNorth = new Racket(this, width/2, Y, RACKET_W, RACKET_H);
     racketSouth = new Racket(this, width/2, height-RACKET_H, RACKET_W, RACKET_H);
     // Redraw every INTERVAL ms.
-    intervalId = document.window.setInterval(redraw, INTERVAL);
+    timer = new Timer.repeating(INTERVAL, (t) => redraw());
   }
 
   void border() {
@@ -88,7 +88,7 @@ class Board {
         dy = -dy;
       } else {
         // The ball hit the north side but outside the racket - game over, so stop the animation.
-        document.window.clearInterval(intervalId);
+        timer.cancel();
       }
     }
 
@@ -98,7 +98,7 @@ class Board {
         dy = -dy;
       } else {
         // The ball hit the south side but outside the racket - game over, so stop the animation.
-        document.window.clearInterval(intervalId);
+        timer.cancel();
       }
     }
 
