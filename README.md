@@ -1,12 +1,12 @@
 
 ##Ping Pong Game in Dart
 
-Categories: education, game, canvas, cercle, rectangle, HTML5, classes.
+**Categories**: education, game, canvas, circle, rectangle, HTML5, classes.
+
+**Description**: Spirals on learning Dart and canvas of HTML5.
 
 by Dzenan Ridjanovic
 2011-12-06
-
-Spirals on learning Dart and canvas of HTML5.
 
 Based on:
 Google Dart port 
