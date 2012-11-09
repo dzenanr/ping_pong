@@ -1,11 +1,11 @@
 
-#import('dart:html');
-#import('dart:isolate');
-#import('dart:math');
+import 'dart:html';
+import 'dart:isolate';
+import 'dart:math';
 
-#source('board.dart');
-#source('ball.dart');
-#source('racket.dart');
+part 'board.dart';
+part 'ball.dart';
+part 'racket.dart';
 
 // See the style guide: http://www.dartlang.org/articles/style-guide/.
 
