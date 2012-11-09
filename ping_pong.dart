@@ -3,9 +3,9 @@
 #import('dart:isolate');
 #import('dart:math');
 
-#source('Board.dart');
-#source('Ball.dart');
-#source('Racket.dart');
+#source('board.dart');
+#source('ball.dart');
+#source('racket.dart');
 
 // See the style guide: http://www.dartlang.org/articles/style-guide/.
 

@@ -1,5 +1,5 @@
 
-##Ping Pong Game in Dart
+##Ping Pong Game in Dart with Canvas
 
 **Categories**: education, game, canvas, circle, rectangle, HTML5, classes.
 
