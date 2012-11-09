@@ -3,12 +3,12 @@ class Board {
 
   final num x = 0;
   final num y = 0;
-  final num ball_r = 8;
-  final num racket_w = 75;
-  final num racket_h = 8;
+  final num ballRadius = 8;
+  final num racketWidth = 75;
+  final num racketHeight = 8;
   final num interval = 10;
 
-  var timer;
+  Timer timer;
 
   CanvasElement canvas;
   CanvasRenderingContext2D context;
@@ -39,9 +39,10 @@ class Board {
   }
 
   void init() {
-    ball = new Ball(this, startBallX, startBallY, ball_r);
-    racketNorth = new Racket(this, width/2, y, racket_w, racket_h);
-    racketSouth = new Racket(this, width/2, height - racket_h, racket_w, racket_h);
+    ball = new Ball(this, startBallX, startBallY, ballRadius);
+    racketNorth = new Racket(this, width/2, y, racketWidth, racketHeight);
+    racketSouth = new Racket(this, width/2, height - racketHeight, racketWidth,
+        racketHeight);
     // Redraw every interval ms.
     timer = new Timer.repeating(interval, (t) => redraw());
   }
