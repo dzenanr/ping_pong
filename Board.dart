@@ -1,12 +1,12 @@
 
 class Board {
 
-  final num x = 0;
-  final num y = 0;
-  final num ballRadius = 8;
-  final num racketWidth = 75;
-  final num racketHeight = 8;
-  final num interval = 10;
+  const num x = 0;
+  const num y = 0;
+  const num ballRadius = 8;
+  const num racketWidth = 75;
+  const num racketHeight = 8;
+  const num interval = 10;
 
   Timer timer;
 
@@ -64,7 +64,7 @@ class Board {
 
     ball.draw();
 
-    // Move the north side racket if the left or the right key is currently pressed.
+    // Move the north side racket if the left or the right key is pressed.
     if (racketNorth.rightDown) {
       if (racketNorth.x < width - x - racketNorth.w - 4) racketNorth.x += 5;
     } else if (racketNorth.leftDown) {
@@ -72,7 +72,7 @@ class Board {
     }
     racketNorth.draw();
 
-    // Move the south side racket if the left or the right key is currently pressed.
+    // Move the south side racket if the left or the right key is pressed.
     if (racketSouth.rightDown) {
       if (racketSouth.x < width - x - racketSouth.w - 4) racketSouth.x += 5;
     } else if (racketSouth.leftDown) {
@@ -88,7 +88,8 @@ class Board {
       if (ball.x > racketNorth.x && ball.x < racketNorth.x + racketNorth.w) {
         dy = -dy;
       } else {
-        // The ball hit the north side but outside the racket - game over, so stop the animation.
+        // The ball hit the north side but outside the racket -
+        // game over, so stop the animation.
         timer.cancel();
       }
     }
@@ -98,7 +99,8 @@ class Board {
       if (ball.x > racketSouth.x && ball.x < racketSouth.x + racketSouth.w) {
         dy = -dy;
       } else {
-        // The ball hit the south side but outside the racket - game over, so stop the animation.
+        // The ball hit the south side but outside the racket -
+        // game over, so stop the animation.
         timer.cancel();
       }
     }
