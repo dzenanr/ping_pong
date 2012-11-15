@@ -9,21 +9,18 @@ Global setup:
   git config --global user.email dzenanr@gmail.com
       
 Next steps:
-  mkdir ping_pong
-  cd ping_pong
+  mkdir pingpong
+  cd pingpong
   git init
   touch README
   git add README
   git commit -m 'first commit'
-
-  Create a new repository at GitHub.
-
-  git remote add origin git@github.com:dzenanr/ping_pong.git
+  git remote add origin git@github.com:dzenanr/pingpong.git
   git push -u origin master
       
 Existing Git Repo?
   cd existing_git_repo
-  git remote add origin git@github.com:dzenanr/ping_pong.git
+  git remote add origin git@github.com:dzenanr/pingpong.git
   git push -u origin master
 
 Git
@@ -47,7 +44,7 @@ git log --stat --summary
 
 git config --list
 
-git remote add origin git@github.com:dzenanr/ping_pong.git
+git remote add origin git@github.com:dzenanr/pingpong.git
 git push origin master
 
 Git Tutorial for SVN Users
@@ -73,23 +70,11 @@ http://game.github.com/p/tagging.html
 git tag -a s01 -m 'spiral 01'
 git tag
 
-Clone a remote repository into a local repository
-
-cd git
-cd dart
-cd game
-git clone git@github:chrisbu/Bounce .
-JSZ.
-
-Get the latest changes from the remote repository
-
-git pull
-
 ------------------------------------------------------
 
 Git Bash
 
-cd git/dart/game/ping_pong
+cd git/dart/game/pingpong
 
 git add .
 git tag
@@ -100,6 +85,3 @@ git tag
 
 git push origin master
 git status
-
-To push tags:
-git push --tags

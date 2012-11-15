@@ -1,0 +1,26 @@
+/* layout2c.css */
+
+/* ===[ begin ]=== */
+
+/*
+  Title:                   2 Columns Layout Design Style
+  Author:                  Dzenan Ridjanovic
+  Influenced By:           http://www.simplebits.com/
+  Created:                 2006-09-03
+  Updated:                 2011-12-08
+*/
+	
+/* ===[ 2 columns layout ]=== */
+	
+  aside {
+    float: left;
+    width: 33%;
+    background: #fffff0;
+  }
+     
+  #main {
+    float: right;
+    width: 65%;
+  }
+		
+/* ===[ end ]=== */

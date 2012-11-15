@@ -15,9 +15,6 @@ Next steps:
   touch README
   git add README
   git commit -m 'first commit'
-
-  Create a new repository at GitHub.
-
   git remote add origin git@github.com:dzenanr/ping_pong.git
   git push -u origin master
       
@@ -70,20 +67,8 @@ Tagging for versions (spirals)
 
 http://game.github.com/p/tagging.html
 
-git tag -a s01 -m 'spiral 01'
-git tag
-
-Clone a remote repository into a local repository
-
-cd git
-cd dart
-cd game
-git clone git@github:chrisbu/Bounce .
-JSZ.
-
-Get the latest changes from the remote repository
-
-git pull
+$ git tag -a s01 -m 'spiral 01'
+$ git tag
 
 ------------------------------------------------------
 
@@ -92,14 +77,10 @@ Git Bash
 cd git/dart/game/ping_pong
 
 git add .
-git tag
-git commit -m "spiral 0?"
+git commit -m "short description"
 
-git tag -a s01 -m 'spiral 01'
-git tag
+$ git tag -a s01 -m 'spiral 01'
+$ git tag
 
+? git remote add origin git@github.com:dzenanr/ping_pong.git
 git push origin master
-git status
-
-To push tags:
-git push --tags
