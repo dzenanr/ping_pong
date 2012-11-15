@@ -6,20 +6,24 @@ class Board {
   }
 
   //draw a circle
-  void circle(x, y, r, style) {
-    // context.setStrokeStyle(style);  // bug: nothing drawn
+  void circle(x, y, r, strokeStyle, fillStyle) {
     context.beginPath();
+    context.strokeStyle = strokeStyle;
+    context.fillStyle = fillStyle;
     context.arc(x, y, r, 0, PI*2, true);
-    context.closePath();
     context.stroke();
+    context.fill();
+    context.closePath();
   }
 
   //draw a rectangle
-  void rectangle(x, y, w, h, style) {
-    //context.setFillStyle(style);  // bug: nothing drawn
+  void rectangle(x, y, w, h, strokeStyle, fillStyle) {
     context.beginPath();
+    context.strokeStyle = strokeStyle;
+    context.fillStyle = fillStyle;
     context.rect(x,y,w,h);
-    context.closePath();
     context.stroke();
+    context.fill();
+    context.closePath();
   }
 }
