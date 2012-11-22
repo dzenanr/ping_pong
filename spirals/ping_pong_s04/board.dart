@@ -1,3 +1,5 @@
+part of ping_pong;
+
 class Board {
   CanvasElement canvas;
   CanvasRenderingContext2D context;

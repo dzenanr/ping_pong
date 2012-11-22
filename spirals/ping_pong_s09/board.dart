@@ -1,3 +1,5 @@
+part of ping_pong;
+
 // table board or squash court
 class Board {
 

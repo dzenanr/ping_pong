@@ -1,3 +1,5 @@
+part of ping_pong;
+
 class Board {
   // squash court
   final num START_X = 150;

@@ -1,3 +1,5 @@
+part of ping_pong;
+
 /** Table board or squash court. */
 class Board {
 

@@ -1,3 +1,5 @@
+part of ping_pong;
+
 class Board {
   final num START_X = 150;
   final num START_Y = 150;

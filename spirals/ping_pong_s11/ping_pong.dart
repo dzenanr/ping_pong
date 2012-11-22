@@ -1,3 +1,5 @@
+library ping_pong;
+
 import 'dart:html';
 import 'dart:isolate';
 import 'dart:math';

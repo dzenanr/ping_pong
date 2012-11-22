@@ -1,3 +1,5 @@
+part of ping_pong;
+
 class Ball {
 
   Board board;
