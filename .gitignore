@@ -1,3 +1,6 @@
-ping_pong.dart.js
-ping_pong.dart.js.map
+.children
+packages
+*.js
+*.js.deps
+*.js.map
 *~
