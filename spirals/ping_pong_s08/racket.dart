@@ -18,9 +18,9 @@ class Racket {
     canvasMinX = 0;
     canvasMaxX = canvasMinX + board.width;
     draw();
-    document.on.keyDown.add(_onKeyDown);
-    document.on.keyUp.add(_onKeyUp);
-    document.on.mouseMove.add(_onMouseMove);
+    document.onKeyDown.listen(_onKeyDown);
+    document.onKeyUp.listen(_onKeyUp);
+    document.onMouseMove.listen(_onMouseMove);
   }
 
   void draw() {

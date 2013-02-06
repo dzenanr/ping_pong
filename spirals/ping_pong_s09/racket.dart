@@ -14,9 +14,9 @@ class Racket {
 
   Racket(this.board, this.x, this.y, this.w, this.h) {
     draw();
-    document.on.keyDown.add(_onKeyDown);
-    document.on.keyUp.add(_onKeyUp);
-    document.on.mouseMove.add(_onMouseMove);
+    document.onKeyDown.listen(_onKeyDown);
+    document.onKeyUp.listen(_onKeyUp);
+    document.onMouseMove.listen(_onMouseMove);
   }
 
   void draw() {

@@ -13,8 +13,8 @@ class Racket {
 
   Racket(this.board, this.x, this.y, this.w, this.h) {
     draw();
-    document.on.keyDown.add(_onKeyDown);
-    document.on.keyUp.add(_onKeyUp);
+    document.onKeyDown.listen(_onKeyDown);
+    document.onKeyUp.listen(_onKeyUp);
   }
 
   void draw() {

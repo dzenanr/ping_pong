@@ -33,7 +33,7 @@ class Board {
 
     startBallX = width ~/ 2;
     startBallY = height ~/ 2;
-    document.query('#play').on.click.add((e) {
+    document.query('#play').onClick.listen((e) {
       init();
     });
 
