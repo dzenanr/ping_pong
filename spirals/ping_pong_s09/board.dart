@@ -10,7 +10,6 @@ class Board {
   final num BALL_R = 8;
   final num RACKET_W = 75;
   final num RACKET_H = 10;
-  final num INTERVAL = 12;
 
   Timer timer;
 
@@ -38,8 +37,9 @@ class Board {
     ball = new Ball(this, START_BALL_X, START_BALL_Y, BALL_R);
     racketNorth = new Racket(this, width/2, Y, RACKET_W, RACKET_H);
     racketSouth = new Racket(this, width/2, height-RACKET_H, RACKET_W, RACKET_H);
-    //redraw every INTERVAL ms
-    timer = new Timer.repeating(INTERVAL, (t) => redraw());
+    // redraw every 12 ms
+    timer = new Timer.repeating(const Duration(milliseconds: 12),
+        (t) => redraw());
     border();
   }
 
