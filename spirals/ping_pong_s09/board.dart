@@ -38,7 +38,7 @@ class Board {
     racketNorth = new Racket(this, width/2, Y, RACKET_W, RACKET_H);
     racketSouth = new Racket(this, width/2, height-RACKET_H, RACKET_W, RACKET_H);
     // redraw every 12 ms
-    timer = new Timer.repeating(const Duration(milliseconds: 12),
+    timer = new Timer.periodic(const Duration(milliseconds: 12),
         (t) => redraw());
     border();
   }

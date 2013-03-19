@@ -16,7 +16,7 @@ class Board {
   void init() {
     Ball ball = new Ball(this, 0, 0, 10);
     //move() called every 10ms.
-    new Timer.repeating(const Duration(milliseconds: 10), (t) => ball.move());
+    new Timer.periodic(const Duration(milliseconds: 10), (t) => ball.move());
   }
 
   void clear() {
