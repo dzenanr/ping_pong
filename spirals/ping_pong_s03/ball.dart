@@ -21,7 +21,7 @@ class Ball {
   }
 
   void move() {
-    board.clear();
+    //board.clear();
     board.context.beginPath();
     board.context.arc(x, y, r, 0, PI*2, true);
     board.context.closePath();

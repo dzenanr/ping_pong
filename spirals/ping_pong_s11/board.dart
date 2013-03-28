@@ -3,11 +3,11 @@ part of ping_pong;
 /** Table board or squash court. */
 class Board {
 
-  final num x = 0;
-  final num y = 0;
-  final num ballRadius = 8;
-  final num racketWidth = 75;
-  final num racketHeight = 8;
+  const num x = 0;
+  const num y = 0;
+  const num ballRadius = 8;
+  const num racketWidth = 75;
+  const num racketHeight = 8;
 
   Timer timer;
 
