@@ -3,13 +3,13 @@ part of ping_pong;
 // table board or squash court
 class Board {
 
-  const X = 0;
-  const Y = 0;
-  const num START_BALL_X = 150;
-  const num START_BALL_Y = 150;
-  const num BALL_R = 8;
-  const num RACKET_W = 75;
-  const num RACKET_H = 10;
+  static const X = 0;
+  static const Y = 0;
+  static const num START_BALL_X = 150;
+  static const num START_BALL_Y = 150;
+  static const num BALL_R = 8;
+  static const num RACKET_W = 75;
+  static const num RACKET_H = 10;
 
   Timer timer;
 

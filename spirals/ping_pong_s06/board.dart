@@ -1,11 +1,11 @@
 part of ping_pong;
 
 class Board {
-  const num START_X = 0;
-  const num START_Y = 0;
-  const num BALL_R = 10;
-  const num RACKET_W = 75;
-  const num RACKET_H = 10;
+  static const num START_X = 0;
+  static const num START_Y = 0;
+  static const num BALL_R = 10;
+  static const num RACKET_W = 75;
+  static const num RACKET_H = 10;
 
   Timer timer;
 

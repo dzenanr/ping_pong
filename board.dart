@@ -2,11 +2,11 @@ part of ping_pong;
 
 class Board {
 
-  const num X = 0;
-  const num Y = 0;
-  const num BALL_RADIUS = 8;
-  const num RACKET_WIDTH = 75;
-  const num RACKET_HEIGHT = 8;
+  static const num X = 0;
+  static const num Y = 0;
+  static const num BALL_RADIUS = 8;
+  static const num RACKET_WIDTH = 75;
+  static const num RACKET_HEIGHT = 8;
 
   Timer timer;
 

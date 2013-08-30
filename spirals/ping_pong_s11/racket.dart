@@ -46,9 +46,9 @@ class Racket {
 
   // Change a position of a racket with the mouse left or right mouvement.
   void onMouseMove(event) {
-    if (event.pageX > board.x && event.pageX < board.width) {
-      x = event.pageX - board.x - w/2;
-      if (x < board.x) x = board.x;
+    if (event.pageX > Board.X && event.pageX < board.width) {
+      x = event.pageX - Board.X - w/2;
+      if (x < Board.X) x = Board.X;
       if (x > board.width - w) x = board.width - w;
     }
   }

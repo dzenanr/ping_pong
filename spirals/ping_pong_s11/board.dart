@@ -3,11 +3,11 @@ part of ping_pong;
 /** Table board or squash court. */
 class Board {
 
-  const num x = 0;
-  const num y = 0;
-  const num ballRadius = 8;
-  const num racketWidth = 75;
-  const num racketHeight = 8;
+  static const num X = 0;
+  static const num Y = 0;
+  static const num BALL_R = 8;
+  static const num RACKET_W = 75;
+  static const num RACKET_H = 8;
 
   Timer timer;
 
@@ -40,10 +40,10 @@ class Board {
   }
 
   void init() {
-    ball = new Ball(this, startBallX, startBallY, ballRadius);
-    racketNorth = new Racket(this, width/2, y, racketWidth, racketHeight);
-    racketSouth = new Racket(this, width/2, height-racketHeight,
-        racketWidth, racketHeight);
+    ball = new Ball(this, startBallX, startBallY, BALL_R);
+    racketNorth = new Racket(this, width/2, Y, RACKET_W, RACKET_H);
+    racketSouth = new Racket(this, width/2, height-RACKET_H,
+        RACKET_W, RACKET_H);
     // redraw every 10 ms
     timer = new Timer.periodic(const Duration(milliseconds: 10),
         (t) => redraw());
@@ -51,13 +51,13 @@ class Board {
 
   void border() {
     context.beginPath();
-    context.rect(x, y, width, height);
+    context.rect(X, Y, width, height);
     context.closePath();
     context.stroke();
   }
 
   void clear() {
-    context.clearRect(x, y, width, height);
+    context.clearRect(X, Y, width, height);
     border();
   }
 
@@ -68,17 +68,17 @@ class Board {
 
     // Move the north side racket if the left or the right key is currently pressed.
     if (racketNorth.rightDown) {
-      if (racketNorth.x < width - x - racketNorth.w - 4) racketNorth.x += 5;
+      if (racketNorth.x < width - X - racketNorth.w - 4) racketNorth.x += 5;
     } else if (racketNorth.leftDown) {
-      if (racketNorth.x > x + 4) racketNorth.x -= 5;
+      if (racketNorth.x > X + 4) racketNorth.x -= 5;
     }
     racketNorth.draw();
 
     // Move the south side racket if the left or the right key is currently pressed.
     if (racketSouth.rightDown) {
-      if (racketSouth.x < width - x - racketSouth.w - 4) racketSouth.x += 5;
+      if (racketSouth.x < width - X - racketSouth.w - 4) racketSouth.x += 5;
     } else if (racketSouth.leftDown) {
-      if (racketSouth.x > x + 4) racketSouth.x -= 5;
+      if (racketSouth.x > X + 4) racketSouth.x -= 5;
     }
     racketSouth.draw();
 
