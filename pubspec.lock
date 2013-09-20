@@ -4,4 +4,4 @@ packages:
   browser:
     description: browser
     source: hosted
-    version: "0.6.21+3"
+    version: "0.7.2+1"
