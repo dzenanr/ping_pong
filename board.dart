@@ -1,14 +1,11 @@
 part of ping_pong;
 
 class Board {
-
   static const num X = 0;
   static const num Y = 0;
   static const num BALL_RADIUS = 8;
   static const num RACKET_WIDTH = 75;
   static const num RACKET_HEIGHT = 8;
-
-  Timer timer;
 
   CanvasElement canvas;
   CanvasRenderingContext2D context;
@@ -35,7 +32,6 @@ class Board {
     document.query('#play').onClick.listen((e) {
       init();
     });
-
   }
 
   void init() {
@@ -43,9 +39,14 @@ class Board {
     racketNorth = new Racket(this, width/2, Y, RACKET_WIDTH, RACKET_HEIGHT);
     racketSouth = new Racket(this, width/2, height - RACKET_HEIGHT, RACKET_WIDTH,
         RACKET_HEIGHT);
-    // redraw every 10 ms
-    timer = new Timer.periodic(const Duration(milliseconds: 10),
-        (t) => redraw());
+    // redraw
+    window.animationFrame.then(gameLoop);
+  }
+
+  void gameLoop(num delta) {
+    if(redraw()) {
+      window.animationFrame.then(gameLoop);
+    }
   }
 
   void border() {
@@ -60,7 +61,7 @@ class Board {
     border();
   }
 
-  void redraw() {
+  bool redraw() {
     clear();
 
     ball.draw();
@@ -91,7 +92,7 @@ class Board {
       } else {
         // The ball hit the north side but outside the racket -
         // game over, so stop the animation.
-        timer.cancel();
+        return false;
       }
     }
 
@@ -102,12 +103,13 @@ class Board {
       } else {
         // The ball hit the south side but outside the racket -
         // game over, so stop the animation.
-        timer.cancel();
+        return false;
       }
     }
 
     ball.x += dx;
     ball.y += dy;
+    return true;
   }
 
 }
