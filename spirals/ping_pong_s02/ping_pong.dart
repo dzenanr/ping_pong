@@ -7,7 +7,7 @@ part 'board.dart';
 
 void main() {
   //get a reference to the canvas
-  CanvasElement canvas = document.query('#canvas');
+  CanvasElement canvas = document.querySelector('#canvas');
   Board board = new Board(canvas);
   board.circle(100, 100, 100, "#ff1c0a", "#00a308");
   board.circle(220, 220, 50, "#00a308", "#ff1c0a");
