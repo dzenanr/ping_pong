@@ -51,8 +51,8 @@ class Racket {
   }
 
   _onMouseMove(event) {
-    if (event.pageX > canvasMinX && event.pageX < canvasMaxX) {
-      x = event.pageX - canvasMinX;
+    if (event.page.x > canvasMinX && event.page.x < canvasMaxX) {
+      x = event.page.x - canvasMinX;
     }
   }
 
