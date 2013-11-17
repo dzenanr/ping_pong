@@ -29,7 +29,7 @@ class Board {
 
     startBallX = width ~/ 2;
     startBallY = height ~/ 2;
-    document.querySelector('#play').onClick.listen((e) {
+    querySelector('#play').onClick.listen((e) {
       init();
     });
   }

@@ -12,6 +12,6 @@ part 'racket.dart';
 
 void main() {
   // Get a reference to the canvas.
-  CanvasElement canvas = document.querySelector('#canvas');
+  CanvasElement canvas = querySelector('#canvas');
   Board board = new Board(canvas);
 }
