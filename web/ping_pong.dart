@@ -1,12 +1,6 @@
-library ping_pong;
-
 import 'dart:html';
-import 'dart:async';
-import 'dart:math';
 
-part 'board.dart';
-part 'ball.dart';
-part 'racket.dart';
+import 'package:ping_pong/ping_pong.dart';
 
 // See the style guide: http://www.dartlang.org/articles/style-guide/.
 
