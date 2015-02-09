@@ -1,11 +1,11 @@
 part of ping_pong;
 
 class Board {
-  static const num X = 0;
-  static const num Y = 0;
-  static const num BALL_RADIUS = 8;
-  static const num RACKET_WIDTH = 75;
-  static const num RACKET_HEIGHT = 8;
+  static const num x = 0;
+  static const num y = 0;
+  static const num ballRadius = 8;
+  static const num racketWidth = 75;
+  static const num racketHeight = 8;
 
   CanvasElement canvas;
   CanvasRenderingContext2D context;
@@ -35,29 +35,28 @@ class Board {
   }
 
   void init() {
-    ball = new Ball(this, startBallX, startBallY, BALL_RADIUS);
-    racketNorth = new Racket(this, width/2, Y, RACKET_WIDTH, RACKET_HEIGHT);
-    racketSouth = new Racket(this, width/2, height - RACKET_HEIGHT, RACKET_WIDTH,
-        RACKET_HEIGHT);
+    ball = new Ball(this, startBallX, startBallY, ballRadius);
+    racketNorth = new Racket(this, width/2, y, racketWidth, racketHeight);
+    racketSouth = new Racket(this, width/2, height - racketHeight, racketWidth, racketHeight);
     // redraw
     window.animationFrame.then(gameLoop);
   }
 
   void gameLoop(num delta) {
-    if(redraw()) {
+    if (redraw()) {
       window.animationFrame.then(gameLoop);
     }
   }
 
   void border() {
     context.beginPath();
-    context.rect(X, Y, width, height);
+    context.rect(x, y, width, height);
     context.closePath();
     context.stroke();
   }
 
   void clear() {
-    context.clearRect(X, Y, width, height);
+    context.clearRect(x, y, width, height);
     border();
   }
 
@@ -68,17 +67,17 @@ class Board {
 
     // Move the north side racket if the left or the right key is pressed.
     if (racketNorth.rightDown) {
-      if (racketNorth.x < width - X - racketNorth.w - 4) racketNorth.x += 5;
+      if (racketNorth.x < width - x - racketNorth.w - 4) racketNorth.x += 5;
     } else if (racketNorth.leftDown) {
-      if (racketNorth.x > X + 4) racketNorth.x -= 5;
+      if (racketNorth.x > x + 4) racketNorth.x -= 5;
     }
     racketNorth.draw();
 
     // Move the south side racket if the left or the right key is pressed.
     if (racketSouth.rightDown) {
-      if (racketSouth.x < width - X - racketSouth.w - 4) racketSouth.x += 5;
+      if (racketSouth.x < width - x - racketSouth.w - 4) racketSouth.x += 5;
     } else if (racketSouth.leftDown) {
-      if (racketSouth.x > X + 4) racketSouth.x -= 5;
+      if (racketSouth.x > x + 4) racketSouth.x -= 5;
     }
     racketSouth.draw();
 
@@ -111,5 +110,4 @@ class Board {
     ball.y += dy;
     return true;
   }
-
 }

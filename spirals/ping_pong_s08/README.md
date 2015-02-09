@@ -8,8 +8,10 @@
 ping_pong_08
 by Dzenan Ridjanovic
 2011-12-06
-updated
+updated on
 2012-11-14
+updated on
+2015-02-07
 
 Based on:
 Google Dart port 

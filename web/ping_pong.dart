@@ -7,7 +7,6 @@ import 'package:ping_pong/ping_pong.dart';
 // Spiral 12.
 
 void main() {
-  // Get a reference to the canvas.
   CanvasElement canvas = querySelector('#canvas');
   Board board = new Board(canvas);
 }

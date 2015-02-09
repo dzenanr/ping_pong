@@ -1,8 +1,7 @@
 name: ping_pong
+version: 0.0.3
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
+description: Ping pong game with canvas.
 homepage: http://ondart.me/
-version: 0.0.1
-description: >
-  Ping pong game with canvas.
 dependencies:
   browser: any
