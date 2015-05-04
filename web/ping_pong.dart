@@ -8,5 +8,5 @@ import 'package:ping_pong/ping_pong.dart';
 
 void main() {
   CanvasElement canvas = querySelector('#canvas');
-  Board board = new Board(canvas);
+  new Board(canvas);
 }
